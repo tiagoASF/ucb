@@ -2,8 +2,8 @@
 Receba do usuário uma frase e faça o que se pede baseado na API String:
 - Apresente a frase informada em CAIXA ALTA.
 - O tamanho da frase (quantidade de caracteres).
-- A qualificação da frase (menor que 10 caracteres – PEQUENA, maior que 9 e menor que 29 – MEDIA, maior que 30 é GRANDE).
 - A quantidade de palavras que a frase contém.
+- A qualificação da frase (menor que 10 caracteres – PEQUENA, maior que 9 e menor que 29 – MEDIA, maior que 30 é GRANDE).
 - A quantidade de letras 'A' que a frase tem.
 - Valide para verificar se a String contém a palavra "Corrupção", pois se não houver deve ser solicitada novamente ao usuário.
 */
@@ -28,6 +28,17 @@ public class Atividade09 {
         System.out.printf("São %d palavras na frase digitada\n", frasePartida.length);
 
         //Resposta 04
-        
+        System.out.println("Essa é uma frase " + qualificadorDeFrase(fraseDoUsuario));
+
+    }
+
+    public static String qualificadorDeFrase(String frase) {
+        if (frase.length() < 10) {
+            return "PEQUENA";
+        } else if (frase.length() >= 10 && frase.length() < 29) {
+            return "MÉDIA";
+        } else {
+            return "GRANDE";
+        }
     }
 }
