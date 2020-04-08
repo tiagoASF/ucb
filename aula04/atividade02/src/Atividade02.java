@@ -18,6 +18,7 @@ public class Atividade02 {
         String frase = "Eu estou estudando Java";
         String fraseCaixaAlta;
         String fraseCaixaBaixa;
+        String saoIguais;
         int quantidadeDeCaracteres;
         int quantidadeDePalavras;
 
@@ -28,13 +29,22 @@ public class Atividade02 {
         fraseCaixaBaixa = fraseUsuario.toLowerCase();
         quantidadeDeCaracteres = fraseUsuario.length();
 
+        if (frase.toLowerCase().equals(fraseUsuario.toLowerCase())) {
+             saoIguais = "Sim!";
+        } else {
+            saoIguais = "Não...";
+        }
+
         
+
+
 
         System.out.println("OPERAÇÕES COM A FRASE DIGITADA");
         System.out.println("Caixa alta: " + fraseCaixaAlta);
         System.out.println("Caixa baixa: " + fraseCaixaBaixa);
         System.out.println("Quantidade de caracteres: " + quantidadeDeCaracteres);
-        System.out.println("Quantidade de palavras: " + quantidadeDePalavras);
+        System.out.println("A frase do usuário é \"Eu estou estudando java\" ? " + saoIguais);
+        //System.out.println("Quantidade de palavras: " + quantidadeDePalavras);
 
     }
 }
