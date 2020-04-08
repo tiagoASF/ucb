@@ -21,9 +21,13 @@ public class Atividade09 {
         System.out.println("Frase em caixa alta: " + fraseDoUsuario.toUpperCase());
 
         //Resposta 02
-        System.out.printf("A frase digitada possui %d caracteres", fraseDoUsuario.trim().length());
+        System.out.printf("A frase digitada possui %d caracteres\n", fraseDoUsuario.trim().length());
 
         //Resposta 03
+        String[] frasePartida = fraseDoUsuario.split(" ");
+        System.out.printf("São %d palavras na frase digitada\n", frasePartida.length);
+
+        //Resposta 04
         
     }
 }
