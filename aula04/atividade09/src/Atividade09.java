@@ -41,7 +41,12 @@ public class Atividade09 {
         }
         System.out.printf("Há %d vogais \"a\" na frase fornecida\n", contadorDeA);
 
-
+        //Resposta 06
+        if (corrupcaoFinder(fraseDoUsuario, palavraValidadora)) {
+            System.out.println("A palavra " + palavraValidadora + " está contida na frase digitada!");
+        } else {
+            System.out.println("Não foi encontrada a palavra " + palavraValidadora + " na frase digitada.");
+        }
     }
 
     public static String qualificadorDeFrase(String frase) {
@@ -52,5 +57,17 @@ public class Atividade09 {
         } else {
             return "GRANDE";
         }
+    }
+
+    public static Boolean corrupcaoFinder(String frase, String palavraControle) {
+        String[] fraseSplitted = frase.trim().split(" ");
+        boolean checker = false;
+        for (String s : fraseSplitted) {
+            if (s.equals(palavraControle)) {
+                checker = true;
+                break;
+            }
+        }
+        return checker;
     }
 }
