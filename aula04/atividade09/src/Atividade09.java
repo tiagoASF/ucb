@@ -13,6 +13,7 @@ public class Atividade09 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String fraseDoUsuario;
+        String palavraValidadora = "corrupção";
 
         System.out.print("Digite uma frase qualquer: ");
         fraseDoUsuario = sc.nextLine().toLowerCase();
@@ -29,6 +30,17 @@ public class Atividade09 {
 
         //Resposta 04
         System.out.println("Essa é uma frase " + qualificadorDeFrase(fraseDoUsuario));
+
+        //Resposta 05
+        int contadorDeA = 0;
+        for (int i = 0; i < fraseDoUsuario.length(); i++) {
+            char x = fraseDoUsuario.charAt(i);
+            if (x == 'a') {
+                contadorDeA++;
+            }
+        }
+        System.out.printf("Há %d vogais \"a\" na frase fornecida\n", contadorDeA);
+
 
     }
 
