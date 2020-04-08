@@ -9,5 +9,32 @@ usuário e você deverá apresentar os seguintes resultados:
 - A quantidade de palavras que a frase possui.
  */
 
+import java.util.Scanner;
+
 public class Atividade02 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String frase = "Eu estou estudando Java";
+        String fraseCaixaAlta;
+        String fraseCaixaBaixa;
+        int quantidadeDeCaracteres;
+        int quantidadeDePalavras;
+
+        System.out.print("Digite uma frase qualquer: ");
+        String fraseUsuario = sc.nextLine();
+
+        fraseCaixaAlta = fraseUsuario.toUpperCase();
+        fraseCaixaBaixa = fraseUsuario.toLowerCase();
+        quantidadeDeCaracteres = fraseUsuario.length();
+
+        
+
+        System.out.println("OPERAÇÕES COM A FRASE DIGITADA");
+        System.out.println("Caixa alta: " + fraseCaixaAlta);
+        System.out.println("Caixa baixa: " + fraseCaixaBaixa);
+        System.out.println("Quantidade de caracteres: " + quantidadeDeCaracteres);
+        System.out.println("Quantidade de palavras: " + quantidadeDePalavras);
+
+    }
 }
